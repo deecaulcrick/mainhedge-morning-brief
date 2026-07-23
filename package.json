@@ -1,0 +1,29 @@
+{
+  "name": "mainhedge-morning-brief",
+  "version": "1.0.0",
+  "description": "Automated FX & macro morning brief - ingest news, extract facts, synthesize insights, deliver to dashboard + Discord",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "brief": "tsx src/index.ts brief",
+    "brief:dry": "tsx src/index.ts brief --dry",
+    "interrupt": "tsx src/index.ts interrupt",
+    "init-db": "tsx src/index.ts init-db",
+    "dev": "tsx watch src/index.ts brief"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "pg": "^8.13.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/pg": "^8.11.0",
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

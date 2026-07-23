@@ -49,9 +49,12 @@ export interface Threshold {
 // no live market-data feed — see extract.ts.
 export const THRESHOLDS: Threshold[] = [
   { metric: "brent_usd", direction: "above", value: 95, label: "Brent crude > $95" },
-  { metric: "ngn_parallel_premium_pct", direction: "above", value: 12, label: "Parallel/NFEM premium > 12%" },
+  { metric: "brent_usd", direction: "above", value: 100, label: "Brent crude > $100" },
+  { metric: "brent_usd", direction: "below", value: 90, label: "Brent crude < $90" },
+  { metric: "ngn_parallel_premium_pct", direction: "above", value: 4, label: "Parallel/NFEM premium > 4%" },
   { metric: "us_2y_yield_pct", direction: "above", value: 4.5, label: "US 2Y yield > 4.5%" },
   { metric: "btc_usd", direction: "below", value: 50000, label: "BTC < $50,000" },
+  { metric: "btc_usd", direction: "above", value: 66000, label: "BTC > $66,000" },
 ];
 
 // Polling tiers (minutes). Wire these into your scheduler (cron, GitHub
